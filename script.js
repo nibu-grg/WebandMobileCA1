@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    let cardsData = JSON.parse(localStorage.getItem('cardsData')) || [];
     const cardContainer = document.getElementById('cardContainer');
     const detailView = document.getElementById('detailView');
     const detailContent = document.getElementById('detailContent');
@@ -36,10 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     
-    backBtn.addEventListener('click', () => {
-        cardContainer.style.display = 'flex';
-        detailView.style.display = 'none';
-    });
+    // backBtn.addEventListener('click', () => {
+    //     cardContainer.style.display = 'flex';
+    //     detailView.style.display = 'none';
+    // });
 
     createCards();
 });
+
+
