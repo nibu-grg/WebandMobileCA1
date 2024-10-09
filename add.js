@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         reader.onload = function() {
             const detail = {
                 name: name,
-                image: file.name, 
+                image: reader.result, 
                 description: desc
 
             };

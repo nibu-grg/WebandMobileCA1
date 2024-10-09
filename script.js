@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     
-    // backBtn.addEventListener('click', () => {
-    //     cardContainer.style.display = 'flex';
-    //     detailView.style.display = 'none';
-    // });
+    backBtn.addEventListener('click', () => {
+        cardContainer.style.display = 'flex';
+        detailView.style.display = 'none';
+    });
 
     createCards();
 });
