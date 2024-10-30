@@ -7,20 +7,60 @@
         <div id="nav">
             <nav>
                 <ul>
-                    <li><a href="file:///E:/Web%20And%20Mobile/WebandMobileCA1/index.html">Home</a></li>
-                    <li><a href="file:///E:/Web%20And%20Mobile/WebandMobileCA1/add.html">Add</a></li>
+                    <li><a id="Logout">Logout</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li><a  id="AddItem">Add</a></li>
+                    <li><a id="Home">Home</a></li>
                 </ul>
             </nav>
         </div>
-        <div class="card-container" id="cardContainer">
+        <div id="Log"></div>
+        <div id="mainContainer">
+            <h1 id="heading">Find Better Place For You😊</h1>
+            <div class="filter-container" id="filter">
+                <input type="text" id="filterInput" placeholder="Filter by name...">
+                <button id="filterButton">Filter</button>
+            </div>
+            <div class="card-container" id="cardContainer">
 
+            </div>
+            <div class="detail-view" id="detailView" style="display: none;"></div>
+            <div id="detailContent">
+            </div>
+            <div id="btns" style="display: none;"><button id="btnview">Book Viewing</button>
+            <button id="btncancel">Cancel</button>
+            </div>
+        </div>
+        
+
+        
+            
+            <!-- <button id="backBtn">Go Back</button> -->
+            
+            <div id="Additem"></div>
         </div>
 
-        <div class="detail-view" id="detailView" style="display: none;">
-            
-            <button id="backBtn">Go Back</button>
-            <div id="detailContent"></div>
+        <div id="dateTimeModal" class="modal">
+            <div class="modal-content">
+                <div id="content1">
+                    <h2>Select Date and Time</h2>
+                    <input type="date" id="dateInput"><br><br>
+                    <input type="time" id="timeInput"><br><br>
+                    <div class="button-container">
+                        <button id="submitDateTime" style="background-color: #5cb85c;">Confirm</button>
+                        <button id="close">Close</button>
+                    </div>
+                </div>
+                <div id="content2" style="display: none;align-items: center;justify-content: center;text-align: center;">
+                    <h1>Success</h1>
+                    <h4 style="font-style: italic;">Slot Booked (Please take a screen shot of this)</h4>
+                    <p>Date Selected: <span id="datelabel"></span></p>
+                    <p>Time Selected: <span id="timelable"></span></p>
+                    <div class="button-container">
+                        <button id="close1">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="data.js"></script>
