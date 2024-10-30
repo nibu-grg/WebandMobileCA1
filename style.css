@@ -1,3 +1,7 @@
+nav{
+    /* display: flex; */
+}
+
 ul{
     list-style-type: none;
     border-radius: 20px;
@@ -5,6 +9,42 @@ ul{
     padding: 0;
     overflow: hidden;
     background-color: yellowgreen;
+}
+
+#btnview
+{
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(99, 179, 19);
+    border-color: rgb(99, 179, 19);
+    border-radius: 10px;
+    width: 110px;
+    height: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+}
+#btncancel
+{
+    font-weight: bolder;
+    color: white;
+    background-color: crimson;
+    border-color: crimson;
+    border-radius: 10px;
+    width: 110px;
+    height: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#btncancel:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#btnview:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 li{
@@ -23,7 +63,49 @@ li a{
 li a:hover{
     background-color: white;
     color: yellowgreen;
+    cursor: pointer;
 }
+
+#mainContainer {
+    width: 94%;
+    /* max-width: 1200px; */
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+#filterInput {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 220px;
+}
+
+
+#filterButton {
+    padding: 8px 12px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
 
 .card-container{
     display: flex;
@@ -42,7 +124,7 @@ li a:hover{
     cursor: pointer;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.5s;
 }
 
 .card img {
@@ -65,9 +147,15 @@ li a:hover{
 }
 
 .detail-view img {
-    width: 100%;
-    max-width: 400px;
+    width: 10%;
+    max-width: 200px;
     height: auto;
+}
+
+#detailContent img
+{
+    width: 350px;
+    height: 250px;
 }
 
 #backBtn {
@@ -105,13 +193,27 @@ label {
 }
 
 /* Input and textarea styling */
-input[type="text"], input[type="file"], textarea {
+input[type="text"], input[type="file"],input[type="password"],input[type="date"],input[type="time"], textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-size: 14px;
+}
+
+#delete
+{
+    Width:85px;
+    height:35px;
+    border-radius:12px;
+    background-color:rgb(223, 33, 33);
+    color:white;
+    border-color:rgb(223, 33, 33);
+}
+
+#delete:hover{
+    cursor: pointer;
 }
 
 textarea {
@@ -133,5 +235,75 @@ textarea {
 #btn:hover {
     background-color: #218838;
 }
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#submitDateTime
+{
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    width: 70px;
+    border-color: #5cb85c;
+    cursor: pointer;
+}
+
+#close,#close1
+{
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    width: 70px;
+    border-color: #515551;
+    background-color: #515551;
+    cursor: pointer;
+}
+
+#submitDateTime:hover
+{
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: #fff; 
+    margin: auto; 
+    padding: 30px;
+    border: 1px solid #888;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%; 
+    max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 8px; 
+    position: relative; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 
