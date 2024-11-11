@@ -1,5 +1,6 @@
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         
     </head>
@@ -7,19 +8,40 @@
         <div id="nav">
             <nav>
                 <ul>
-                    <li><a id="Logout">Logout</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a  id="AddItem">Add</a></li>
+                    <!-- <li><a id="Logout">Logout</a></li> -->
+                   
+                    <!-- <li><a  id="AddItem">Add</a></li> -->
                     <li><a id="Home">Home</a></li>
+                    <!-- <li><a href="footer">Contact</a></li>
+                    <li style="text-align: left;"><a>Basic Need</a></li> -->
                 </ul>
+                <img id="img" src="interior.jpg" style="width: 100%; height: 300px;"/>
+                <!-- <div class="marquee">
+                    <p>Your dream home awaits you! Discover beautiful interiors and more.</p>
+                </div> -->
             </nav>
         </div>
-        <div id="Log"></div>
+        <div id="Log">
+           
+        </div><br>
         <div id="mainContainer">
-            <h1 id="heading">Find Better Place For You😊</h1>
-            <div class="filter-container" id="filter">
-                <input type="text" id="filterInput" placeholder="Filter by name...">
-                <button id="filterButton">Filter</button>
+            <h1 id="heading" style="text-align: center;">Your dream home awaits you! Discover beautiful interiors and more.</h1><br>
+            <div class="filter-container" id="filter" style="align-items: center;">
+                <input type="text" style="width:200px;height: 50px;border-radius: 10px;" id="filterInput" placeholder="Filter by location...">
+                <button style="width:100px;height: 50px;text-align: center;padding: inherit;"  id="filterButton">search</button>
+                
+                    <!-- <select id="sort-price" style="width:200px;height: 50px;border-radius: 10px;">
+                        <option value="" selected disabled>Select filter...</option>
+                        <option value="low-high">Low to High</option>
+                        <option value="high-low">High to Low</option>
+                    </select> -->
+
+                    <select id="select-type" style="width:200px;height: 50px;border-radius: 10px;border: 1px solid #ccc;text-align: center;">
+                        <option value="" selected disabled>   Select type...</option>
+                        <option value="To Sell">To Sell</option>
+                        <option value="high-low">To Let</option>
+                    </select>
+                
             </div>
             <div class="card-container" id="cardContainer">
 
@@ -27,9 +49,10 @@
             <div class="detail-view" id="detailView" style="display: none;"></div>
             <div id="detailContent">
             </div>
-            <div id="btns" style="display: none;"><button id="btnview">Book Viewing</button>
-            <button id="btncancel">Cancel</button>
-            </div>
+            <div id="btns">
+            <button id="btnview">Book Viewing</button>
+            <button id="btncancel" style="color: white;">Cancel</button>
+            </div><br><br><br>
         </div>
         
 
@@ -43,19 +66,25 @@
         <div id="dateTimeModal" class="modal">
             <div class="modal-content">
                 <div id="content1">
-                    <h2>Select Date and Time</h2>
-                    <input type="date" id="dateInput"><br><br>
-                    <input type="time" id="timeInput"><br><br>
+                    <h2>Fill Information</h2><br>
+                    <input type="text" id="name" placeholder="Enter Name"><br><br>
+                    <input type="text" id="email" placeholder="Ente Email"><br><br>
+                    <input type="number" id="mob" placeholder="Enter Mobile"><br><br>
+                    <input type="date" id="dateInput" placeholder="Select Date"><br><br>
+                    <input type="time" id="timeInput" placeholder="Enter Time"><br><br>
                     <div class="button-container">
-                        <button id="submitDateTime" style="background-color: #5cb85c;">Confirm</button>
-                        <button id="close">Close</button>
+                        <button id="submitDateTime" style="background-color: #5cb85c;color: white;">Confirm</button>
+                        <button id="close" style="color: white;">Close</button>
                     </div>
                 </div>
                 <div id="content2" style="display: none;align-items: center;justify-content: center;text-align: center;">
                     <h1>Success</h1>
-                    <h4 style="font-style: italic;">Slot Booked (Please take a screen shot of this)</h4>
-                    <p>Date Selected: <span id="datelabel"></span></p>
-                    <p>Time Selected: <span id="timelable"></span></p>
+                    <h4 style="font-style: italic;">Viewing Confirmed (Please take a screen shot of this)</h4><br>
+                    <p>Name  : <span id="name1"></span></p><br>
+                    <p>Email : <span id="email1"></span></p><br>
+                    <p>Mobile: <span id="mobile1"></span></p><br>
+                    <p>Date  : <span id="datelabel"></span></p><br>
+                    <p>Time  : <span id="timelable"></span></p><br>
                     <div class="button-container">
                         <button id="close1">Close</button>
                     </div>
@@ -65,5 +94,30 @@
 
         <script src="data.js"></script>
         <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- <footer id="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+                <ul class="social-links">
+                    <li><a href="https://facebook.com" target="_blank"><img src="fb.png" style="height:20px;width:20px;"></a></li>
+                    <li><a href="https://twitter.com" target="_blank"><img src="twitter.png" style="height:20px;width:20px;"></a></li>
+                    <li><a href="https://linkedin.com" target="_blank"><img src="linkedin.png" style="height:20px;width:20px;"></a></li>
+                </ul>
+            </div>
+        </footer> -->
+        <footer>
+            <div class="footer-content">
+                <div class="copyright">
+                 © 2024  All rights reserved.
+                </div>
+                <div class="social-media">
+                    <a href="#"><img src="fb.png" style="height:20px;width:20px;"></a>
+                    <a href="#"><img src="twitter.png" style="height:20px;width:20px;"></i></a>
+                    <a href="#"><img src="linkedin.png" style="height:20px;width:20px;"></i></a>
+                    <a href="#"><img src="yt.png" style="height:20px;width:20px;"></a>
+                </div>
+        
+            </div>
+        </footer>
     </body>
 </html>
