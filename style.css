@@ -781,3 +781,33 @@ body {
     border-radius: 5px;
     cursor: pointer;
 }
+#imgdiv {
+    background-color: #f4f4f9;
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#heading {
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-align: center;
+    margin-left: 20px;
+    max-width: 50%;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
