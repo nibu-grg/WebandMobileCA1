@@ -153,10 +153,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function showDetailView(card) {
+        
         let images = card.otherMedia.map(images=>`<img src="${images.src}" alt="Additional Image">`).join('');
         detailContent.innerHTML = `
             <section class="property-details">
-            <div class="container">
+            <div class="container" >
                 <div class="image-container">
                     <img id="desc_img" src="${card.featuredImage}" alt="${card.name}" class="featured-image">
                     <div class="additional-images">
@@ -173,20 +174,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>Category: ${card.category}</p>
                     <p>BER Rating: ${card.berRating}</p>
                     <p class="description">${card.description}</p>
-                    <button id="delete">Delete</button>
+                    
                 </div>
             </div>
         </section>
         `;
-        if(uname=="Admin"&&password=="admin")
-        {
-            document.getElementById('delete').style.display = 'block';
-        }
-        else
-        {
-            document.getElementById('delete').style.display = 'none';
-        }
-        document.getElementById('img').style.display='none';
+        // document.getElementById('img').style.display='none';
+        document.getElementById("imgdiv").style.display='none';
         detailContent.style.display = 'block';
         heading.style.display='none';
         filter.style.display='none';
@@ -214,8 +208,9 @@ document.addEventListener("DOMContentLoaded", () => {
         detailContent.style.display = 'none';
         adding.style.display ='none';
         heading.style.display='block';
+        document.getElementById("imgdiv").style.display='block';
         filter.style.display='block';
-        document.getElementById('img').style.display='block';
+        // document.getElementById('img').style.display='block';
         document.getElementById('btns').style.display='none';
     });
 
@@ -225,9 +220,10 @@ document.addEventListener("DOMContentLoaded", () => {
         detailView.style.display='none';
         detailContent.style.display = 'none';
         adding.style.display ='none';
+        document.getElementById("imgdiv").style.display='block';
         heading.style.display='block';
         filter.style.display='block';
-        document.getElementById('img').style.display='block';
+        // document.getElementById('img').style.display='block';
         document.getElementById('btns').style.display='none';
     });
     
